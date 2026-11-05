@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Что выбрать — Электро vs Гибрид · Физика Автомобиля</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="block-page">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise"></div>
+
+  <div class="page-bg"><div class="hero-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div></div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-logo">ФизАвто<span>·26</span></div>
+    <span class="nav-single">Выбор</span>
+  </nav>
+
+  <section class="advisor" id="advisor">
+    <div class="section-label">/ 05 — Советник</div>
+    <h2 class="section-title">Что выбрать<br/><em>именно вам?</em></h2>
+
+    <div class="quiz-wrap" id="quizWrap">
+      <div class="quiz-card" id="quizCard">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar"></div>
+        </div>
+        <div class="quiz-step-label" id="quizStepLabel">Вопрос 1 / 4</div>
+        <div class="quiz-question" id="quizQuestion">Где вы в основном ездите?</div>
+        <div class="quiz-options" id="quizOptions"></div>
+      </div>
+      <div class="quiz-result" id="quizResult" style="display:none">
+        <div class="qr-icon" id="qrIcon">⚡</div>
+        <h3 id="qrTitle">Вам подходит электромобиль!</h3>
+        <p id="qrText"></p>
+        <div class="qr-cars" id="qrCars"></div>
+        <button class="quiz-restart" id="quizRestart">← Пройти заново</button>
+      </div>
+    </div>
+
+    <div class="advisor-grid">
+      <div class="advisor-card electric-adv reveal">
+        <div class="adv-badge electric-badge">⚡</div>
+        <h3>Выберите электромобиль, если…</h3>
+        <ul>
+          <li>Преимущественно городские поездки</li>
+          <li>Есть зарядка дома или на работе</li>
+          <li>Важна экологичность</li>
+          <li>Хотите минимальные расходы на ТО</li>
+          <li>Маршруты до 300–500 км в день</li>
+          <li>Развитая зарядная инфраструктура</li>
+        </ul>
+        <div class="adv-verdict electric-verdict">Идеален для города</div>
+      </div>
+      <div class="advisor-card hybrid-adv reveal" style="transition-delay:0.15s">
+        <div class="adv-badge hybrid-badge">♻</div>
+        <h3>Выберите гибрид, если…</h3>
+        <ul>
+          <li>Частые дальние поездки</li>
+          <li>Нет доступа к зарядкам</li>
+          <li>Поездки в отдалённые районы</li>
+          <li>Важна независимость от инфраструктуры</li>
+          <li>Нужна привычная дозаправка на АЗС</li>
+          <li>Холодный климат (Россия)</li>
+        </ul>
+        <div class="adv-verdict hybrid-verdict">Идеален для трасс</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">ФизАвто<span>·26</span></div>
+      <p>Учебный проект по физике</p>
+      <p class="footer-author">Автор: Весёлкин Данил Андреевич, 11 Б класс</p>
+      <p class="footer-note">Научный руководитель: Павлова Ольга Владимировна</p>
+      <p class="footer-school">МОУ «Средняя школа № 2 имени Л.П. Семеновой», г. Ярославль · 2026–2027 уч. год</p>
+    </div>
+  </footer>
+
+  <!-- ─── MODAL ─── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-glass" id="modal">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
